@@ -635,4 +635,4 @@ for(let x = 1; x < 201; x++){
 }
 });
 
-client.login('process.env.BOT_TOKEN');
+client.login('BOT_TOKEN');
