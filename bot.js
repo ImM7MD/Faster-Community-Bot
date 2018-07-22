@@ -566,7 +566,7 @@ client.on('message', message => {
   });
 
  client.on('message', message => {
-    var prefix = ".";
+    var prefix = "!;
     if (message.content.startsWith(prefix + "bot")) {
         const embed = new Discord.RichEmbed()
             .setColor("#34495E")
@@ -626,7 +626,7 @@ for(let x = 1; x < 201; x++){
 });
 
     client.on('message', msg => { 
-if (msg.content.startsWith(`+report`)) {
+if (msg.content.startsWith(`!report`)) {
 // تعريف الارجس
    let args = msg.content.split(" ").slice(1);
 // لو ما منشن احد يرد عيله
