@@ -565,25 +565,16 @@ client.on('message', message => {
     }
   });
 
-  client.on('message', message => {
-    if (message.author.bot) return;
-     if (message.content === prefix + "bot owner") {
-
-
- message.author.sendMessage(`
- 
- __~~اسم بوتك~~__
- ╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱
-♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ 
- __created By__: ImM7MD
-
-Server Support : https://discord.gg/wqNFVCV
-
-bot link : https://discordapp.com/oauth2/authorize?client_id=458382638735163422&scope=bot&permissions=2080374975
-
-`);
-
-message.channel.send('**تم الارسال في الخاص**');
+ client.on('message', message => {
+    var prefix = ".";
+    if (message.content.startsWith(prefix + "bot")) {
+        const embed = new Discord.RichEmbed()
+            .setColor("#34495E")
+            .setDescription(`**my servers**🌐 **__${client.guilds.size}__**
+**Users Count**👥 **__${client.users.size}__**
+**channels Count**📚 **__${client.channels.size}__** `)
+     .setTimestamp();
+     message.channel.sendEmbed(embed);
 
     }
 });
