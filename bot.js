@@ -222,6 +222,7 @@ client.on('message', message => {
            .setThumbnail(message.author.avatarURL)
            .setDescription(`∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :pencil: | الاوامر العامة | :pencil:
+           !mcskin | يضهر لك سكنك في ماين كرفت
            !id | للايدي :id:
            !avatar | للافاتار :round_pushpin:
            !ping | لمعرفة بينق البوت :satellite:
