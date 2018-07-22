@@ -636,7 +636,7 @@ if (msg.content.startsWith(`!report`)) {
 
  
   client.on("message", message => {
-    if(message.content.startsWith(prefix + "server")) {
+    if(message.content.startsWith(prefix ! "server")) {
         if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("**ليس لديك البرمشن المطلوب لاستخدام هذا الامر ❌**");
         const embed = new Discord.RichEmbed()
         .setAuthor(message.guild.name, message.guild.iconURL)
