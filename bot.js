@@ -655,7 +655,7 @@ if (msg.content.startsWith(`!report`)) {
 }})
 
   
-bot.on("message", message => {
+client.on("message", message => {
     var prefix = "!"
     if (!message.content.startsWith(prefix)) return;
       let command = message.content.split(" ")[0];
