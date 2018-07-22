@@ -646,7 +646,7 @@ if (msg.content.startsWith(`!report`)) {
         .addField("📜 اسم السيرفر",`${args}`,true)
         .addField("🌐 بورت السيرفر",`${port}`)
         .setImage(`http://status.mclive.eu/${args}/${args}/25565/banner.png`)
-        .setFooter(`S Bot.`)
+        .setFooter(`Faster Bot.`)
                 .setTimestamp()
     message.channel.send(embed)      
 }})
