@@ -663,7 +663,7 @@ client.on("message", message => {
         if(command === "mcskin") {
                 const args = message.content.split(" ").slice(1).join(" ")
         if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://minotar.net/armor/body/${args}`, "skin.png");
+        const image = new Discord.Attachment(`https://namemc.com/${args}`, "skin.png");
     message.channel.send(image)
         }
     });
