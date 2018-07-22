@@ -654,7 +654,15 @@ if (msg.content.startsWith(`!report`)) {
     message.channel.send(embed)      
 }})
   
-
+client.on('message', message => {
+            if (message.content.startsWith(prefix + " new ")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **ولا شيء** ' ,' *مانضاف شيء اليوم** ')
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
  
 
 
