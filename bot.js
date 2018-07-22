@@ -654,7 +654,7 @@ if (msg.content.startsWith(`!report`)) {
     message.channel.send(embed)      
 }})
 
-  client.on('message', ReBeeL => {
+  client.on('message', message => {
   var prefix = "-";
     if(ReBeeL.author.bot) return;
       if(ReBeeL.content.startsWith(prefix ! "bcowner")) {
