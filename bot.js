@@ -220,7 +220,7 @@ client.on('message', message => {
        const embed = new Discord.RichEmbed()
            .setColor("RANDOM")
            .setThumbnail(message.author.avatarURL)
-           .setDescription(`∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
+           .setDescription(`∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :pencil: | الاوامر العامة | :pencil:
            !id | للايدي :id:
            !avatar | للافاتار :round_pushpin:
@@ -228,11 +228,12 @@ client.on('message', message => {
            !invite | لدعوة البوت :paperclip:
            !bot | للمعلومات عن البوت :book:
            !server | للمعلومات عن السيرفر :dolls:
+           !report | تسوي تبليغ علي شغص بس سوي روح اسمه report
            !mcskin | يضهر لك سكنك في ماين كرفت
            الوان لعرض قائمة الالوان
            لون و اي رقم لتغيير لونك
            !e | يكتبلك كلامك بالايموجي
-           ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
+           ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :telephone_receiver: | اوامر الادمنيه | :telephone_receiver:
            !bc
            !ban
@@ -240,7 +241,7 @@ client.on('message', message => {
            !unmute
            !kick
            !clear
-           ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
+           ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :video_game: | اوامر الالعاب | :video_game:
            !فكك 
            !اسالني
@@ -339,7 +340,7 @@ client.on("message", message => {
 
   client.on('ready', function(){
     var ms = 1000 ;
-    var setGame = [`!h `,` !he`,`!hel`,`!help`];
+    var setGame = [`Fa `,` st`,`!er`,`!help`];
     var i = -1;
     var j = 0;
     setInterval(function (){
