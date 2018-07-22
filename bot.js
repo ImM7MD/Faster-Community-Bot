@@ -654,29 +654,7 @@ if (msg.content.startsWith(`!report`)) {
     message.channel.send(embed)      
 }})
 
-  client.on('message', message => {
-  var prefix = "-";
-    if(ReBeeL.author.bot) return;
-      if(ReBeeL.content.startsWith(prefix ! "bcowner")) {
-        let args = ReBeeL.content.split(" ").slice(1);
-           if(!args[0]) {
-              ReBeeL.channel.send("** -bcowner <message> **")
-                return;
-                  }      
-                   var rebel = new Discord.RichEmbed()
-                      .setColor("#000000")
-                        .setDescription(`
-تم إرسآل لك رسآلة من السيرفر الخاص بك 
-${ReBeeL.guild.name}
-الرسآلة 
-${args}
-        `)
-        .setFooter(` بوآسطة ${ReBeeL.author.username}#${ReBeeL.author.discriminator}`)
-       ReBeeL.guild.owner.send(rebel);
-      ReBeeL.channel.send("**تم إرسآل الرسآلة إلى أونر السيرفر**")
-     }
-    }
-  );
+
 
 
 
