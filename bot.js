@@ -222,13 +222,13 @@ client.on('message', message => {
            .setThumbnail(message.author.avatarURL)
            .setDescription(`∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :pencil: | الاوامر العامة | :pencil:
-           !mcskin | يضهر لك سكنك في ماين كرفت
            !id | للايدي :id:
            !avatar | للافاتار :round_pushpin:
            !ping | لمعرفة بينق البوت :satellite:
            !invite | لدعوة البوت :paperclip:
            !bot | للمعلومات عن البوت :book:
            !server | للمعلومات عن السيرفر :dolls:
+           !mcskin | يضهر لك سكنك في ماين كرفت
            الوان لعرض قائمة الالوان
            لون و اي رقم لتغيير لونك
            !e | يكتبلك كلامك بالايموجي
