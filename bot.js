@@ -244,7 +244,7 @@ client.on('message', message => {
            !unmute
            !kick
            !clear
-           ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
+           ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :video_game: | اوامر الالعاب | :video_game:
            !فكك 
            !اسالني
@@ -655,18 +655,17 @@ if (msg.content.startsWith(`!report`)) {
 }})
 
   
-client.on("message", message => {
-    var prefix = "!"
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "mcskin") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://namemc.com/${args}`, "skin.png");
-    message.channel.send(image)
-        }
-    });
+client.on('message', function(message) {
+	const myID = "452191687159185409";
+    let args = message.content.split(" ").slice(1).join(" ");
+    if(message.content.startsWith(prefix + "setname")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setUsername(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
 
 
 
