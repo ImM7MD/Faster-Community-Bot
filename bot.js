@@ -625,10 +625,10 @@ if (msg.content.startsWith(`!report`)) {
   if (msg.guild.channels.find('name', 'report')) {
 // استبدل هنا بعد
     msg.guild.channels.find('name', 'report').send(`
-  تبليغ على : ${msg.mentions.members.first()}
-  بلغ عليه من قبل : ${msg.author}
-  في روم : ${msg.channel.name}
-  السبب : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+ **تبليغ علي** : ${msg.mentions.members.first()}
+  **بلغ عليه من قبل** : ${msg.author}
+  **في روم** : ${msg.channel.name}
+ **السبب**** : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
   `)
   }
 }
