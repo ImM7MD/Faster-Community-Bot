@@ -565,19 +565,40 @@ client.on('message', message => {
     }
   });
 
- client.on('message', message => {
-    var prefix = "!;
-    if (message.content.startsWith(prefix + "bot")) {
-        const embed = new Discord.RichEmbed()
-            .setColor("#34495E")
-            .setDescription(`**my servers**🌐 **__${client.guilds.size}__**
-**Users Count**👥 **__${client.users.size}__**
-**channels Count**📚 **__${client.channels.size}__** `)
-     .setTimestamp();
-     message.channel.sendEmbed(embed);
+function timeCon(time) {
+    let days = Math.floor(time % 31536000 / 86400)
+    let hours = Math.floor(time % 31536000 % 86400 / 3600)
+    let minutes = Math.floor(time % 31536000 % 86400 % 3600 / 60)
+    let seconds = Math.round(time % 31536000 % 86400 % 3600 % 60)
+    days = days > 9 ? days : '0' + days
+    hours = hours > 9 ? hours : '0' + hours
+    minutes = minutes > 9 ? minutes : '0' + minutes
+    seconds = seconds > 9 ? seconds : '0' + seconds
+    return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
+}
+    var prefix = ".";
 
+client.on('message'
+           , message => {
+    if(message.content.startsWith(prefix +"info")) {
+        message.channel.send({
+            embed: new Discord.RichEmbed()
+                .setAuthor(client.user.username, client.user.avatarURL)
+                .setThumbnail(client.user.avatarURL)
+                .setColor('#34495E')
+                .setTitle('INFO', `${client.user.tag}`)
+                .addField('``Uptime``', [timeCon(process.uptime())], true)
+                .addField('``My Ping``', [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+                .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+                .addField('``My Name``', `[ ${client.user.tag} ]`, true)
+                .addField('``My ID``', `[ ${client.user.id} ]`, true)
+                .addField('``My Prefix``', `[ ${prefix} ]`, true)
+                .addField('``My Language``', `[ Java Script ]`, true)
+     })
     }
-});
+}); 
+
+
 
 client.on('message', msg => {//msg
   if (msg.content === 'الوان') {
