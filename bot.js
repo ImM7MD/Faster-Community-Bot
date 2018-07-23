@@ -341,23 +341,12 @@ client.on("message", message => {
 }
 });
 
-  client.on('ready', function(){
-    var ms = 1000 ;
-    var setGame = [`!h `,` e`,`l`,`p`];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/idk`);
-    }, ms);1000
-
-});
+client.on('message', msg => {
+let args = msg.content.split(" ").slice(1).join(" ")
+If(msg.content.startsWith(prefix + 'ss')) {
+client.user.setGame(args, 'https://www.twitch.tv/mr_imm7md');
+}
+})
 
 client.on('message', async message => {
   let args = message.content.split(" ");
