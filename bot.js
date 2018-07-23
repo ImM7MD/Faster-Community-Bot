@@ -343,7 +343,7 @@ client.on("message", message => {
 
 client.on('message', msg => {
 let args = msg.content.split(" ").slice(1).join(" ")
-If(msg.content.startsWith(prefix + 'ss')) {
+if(msg.content.startsWith(prefix + 'ss')) {
 client.user.setGame(args, 'https://www.twitch.tv/mr_imm7md');
 }
 });
