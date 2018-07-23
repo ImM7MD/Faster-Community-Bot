@@ -346,7 +346,7 @@ let args = msg.content.split(" ").slice(1).join(" ")
 If(msg.content.startsWith(prefix + 'ss')) {
 client.user.setGame(args, 'https://www.twitch.tv/mr_imm7md');
 }
-})
+});
 
 client.on('message', async message => {
   let args = message.content.split(" ");
