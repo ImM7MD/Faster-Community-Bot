@@ -653,15 +653,6 @@ client.on("guildMemberAdd", member => {
 })
 
 
-client.on("guildMemberAdd", function(member) {
-    const wc = member.guild.channels.find("➼welcome🙌", "اسم الشات")
-        const embed = new Discord.RichEmbed()
-        .setColor('00FF01')
-        .setAuthor(member.user.tag, member.user.avatarURL)
-        .setFooter("اهلا وسهلا فيك ومرحبتين منور  ")
-        .setTimestamp()
-        return wc.sendEmbed(embed);
-});
 
 
 
