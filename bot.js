@@ -660,7 +660,7 @@ if(message.content.startsWith(prefix !'apply')) {
             m = currentTime.getMonth() + 1,
             d = currentTime.getDate();
 if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("**لا توجد لديك صلاحية** :x: \`\` Manage Messages \`\`");
-  const applyroom = message.guild.channels.find("apply", "اسم الروم")
+  const applyroom = message.guild.channels.find("name", "apply")
    var mn = message.author.id   
    var apply = message.content.split(' ').slice(1).join(' ')
   if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات :x:`);
