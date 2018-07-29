@@ -653,26 +653,6 @@ client.on("guildMemberAdd", member => {
 })
 
 
-    client.on('message', message => {
-if(message.content.startsWith(prefix !'apply')) {
-            var currentTime = new Date(),
-            y = currentTime.getFullYear(),
-            m = currentTime.getMonth() + 1,
-            d = currentTime.getDate();
-if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("**لا توجد لديك صلاحية** :x: \`\` Manage Messages \`\`");
-  const applyroom = message.guild.channels.find("name", "apply")
-   var mn = message.author.id   
-   var apply = message.content.split(' ').slice(1).join(' ')
-  if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات :x:`);
-    var apply = new Discord.RichEmbed()
-       .setThumbnail(message.author.avatarURL)
-   .setTitle(`New Application ♦`)
-   .setDescription(`From : __<@${mn}>__\n\nApplication: **${apply}**`)
-   .setFooter( "Date : " + d + "-" + m + "-" +y)
-    applyroom.send(apply)
-   
-}    
-});
 
 
 
