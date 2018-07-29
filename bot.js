@@ -671,9 +671,7 @@ if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("**Ù„Ø
    .setFooter( "Date : " + d + "-" + m + "-" +y)
     applyroom.send(apply)
    
-}  
-
-    
+}    
 });
 
 
