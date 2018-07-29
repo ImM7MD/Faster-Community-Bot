@@ -658,7 +658,7 @@ client.on('message', message => {
     var reason = message.content.split(' ').slice(2).join(' ');
     if(message.content.startsWith(prefix !! 'report')) {
         if(message.author.bot) return;
-        if(!message.guild.channels.find('name', 'اسم الروم')) return message.channel.send('**الرجاء صنع روم باسم (اسم الروم) لارسال الريبورتات اليه**').then(msg => msg.delete(5000));
+        if(!message.guild.channels.find('name', 'report')) return message.channel.send('**الرجاء صنع روم باسم (اسم الروم) لارسال الريبورتات اليه**').then(msg => msg.delete(5000));
     if(!name1) return message.reply('**منشن اسم الشخص الي تبي تبلغ عليه**').then(msg => msg.delete(3000))
         message.delete();
     if(!reason) return message.reply('**اكتب وش سوى**').then(msg => msg.delete(3000))
