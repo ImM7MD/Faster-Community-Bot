@@ -652,8 +652,8 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
-const prefix = "!";
 
+const prefix = "!";
  client.on('message', message => { 
 if(message.content.startsWith(prefix + 'sg')) {
       if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات :x:`);
