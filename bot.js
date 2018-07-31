@@ -679,7 +679,7 @@ if(message.content.startsWith(prefix + 'sg')) {
    .setDescription(`**
 __المقترح__ :\n <@${ID}>\n
 __الإقتراح__ :  \`\`\`${args.join(" ")}\`\`\`**`)
-           client.channels.get("         473899151197732864             ").sendEmbed(embed)
+           client.channels.get("473899151197732864").sendEmbed(embed)
   message.channel.sendEmbed(embet).then(message => {message.delete(50000)})
             message.react("📩")
 }
