@@ -685,101 +685,92 @@ __الإقتراح__ :  \`\`\`${args.join(" ")}\`\`\`**`)
 }
 });
 
-  client.on('message', message => {
-   if(message.content.startsWith(prefix + "invites")) {
-    message.guild.fetchInvites().then(invs => {
-      let user = message.mentions.users.first() || message.author
-      let personalInvites = invs.filter(i => i.inviter.id === user.id);
-      let inviteCount = personalInvites.reduce((p, v) => v.uses + p, 0);
-               let mmmmEmbed = new Discord.RichEmbed()
-                         .setAuthor(client.user.username)
-                         .setThumbnail(message.author.avatarURL)
- .addField(` لقد قمت بدعوة :`, ` ${inviteCount} `)
-           .setFooter(`- Requested By: ${message.author.tag}`);
-           message.channel.send(mmmmEmbed)
-});
-  }
-});
-
-
-	client.on('message', async msg => {
-	    var user = msg.author;
-			var a = msg.guild.roles.find("name", 'Agar');
-		if(!a){
+ client.on('message', async msg => {
+        var user = msg.author;
+            var a = msg.guild.roles.find("name", 'Agar');
+            var ae = client.emojis.find("name", "Agar")
+        if(!a){
         a = await msg.guild.createRole({
-		  name: "Agar",
+          name: "Agar",
           color: "#ffffff",
           permissions:[]
-		})
-
+        })
+ 
         }
-	    var m = msg.guild.roles.find("name", 'Minecraft');
-	if(!m){
+        var m = msg.guild.roles.find("name", 'Minecraft');
+        var me = client.emojis.find("name", "MineCraft")
+    if(!m){
         m =  await msg.guild.createRole({
-		  name: "Minecraft",
+          name: "Minecraft",
           color: "#ffffff",
           permissions:[]
-		})
+        })
         }
         var f = msg.guild.roles.find("name", 'Fortnite');
-		if(!f){
+        var fe = client.emojis.find("name", "purepng")
+        if(!f){
         f =  await msg.guild.createRole({
-		  name: "Fortnite",
+          name: "Fortnite",
           color: "#ffffff",
           permissions:[]
-		})
+        })
         }
         var b = msg.guild.roles.find("name", 'Brawlhalla');
-		if(!b){
+var be = client.emojis.find("name", "bhlogocenter")
+        if(!b){
         b =  await msg.guild.createRole({
-		  name: "Brawlhalla",
+          name: "Brawlhalla",
           color: "#ffffff",
           permissions:[]
-		})
+        })
         }
         var black = msg.guild.roles.find("name", 'Blacksquad');
-	if(!black){
+        var ble = client.emojis.find("name", "logo")
+    if(!black){
         black =  await msg.guild.createRole({
-		  name: "Blacksquad",
+          name: "Blacksquad",
           color: "#ffffff",
           permissions:[]
-		})
+        })
         }
         var le = msg.guild.roles.find("name", 'League Of Legends');
-	if(!le){
+var lee = client.emojis.find("name", "League_of_Legends_logo")
+    if(!le){
         le =  await msg.guild.createRole({
-		  name: "League Of Legends",
+          name: "League Of Legends",
           color: "#ffffff",
           permissions:[]
-		})
+        })
         }
         var bn = msg.guild.roles.find("name", 'Bonk.io');
-	if(!bn){
+var bne = client.emojis.find("name", "df095113fba8e08a042a10ca77c002be")
+ 
+    if(!bn){
         bn =  await msg.guild.createRole({
-		  name: "Bonk.io",
+          name: "Bonk.io",
           color: "#ffffff",
           permissions:[]
-		})
+        })
         }
 var prefix = "!";
-		if (msg.content.startsWith(prefix +'add')) {
-
-		if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-msg.channel.send(`**\n:Agar: : \` Agar\`  \n:minecraft_hd_logo_by_nuryrushda2: :\` Minecraft \` \n👊  :\` Fortnite \` \n👌 :\`  Brawlhalla\`  \n🍸 :\` Blacksquad\` \n🥂 :\`League Of Legends\` \n🌕 :\`Bonk.io\`**`).then(res => {     res.react(':Agar:').then(r=>{
-     res.react(':minecraft_hd_logo_by_nuryrushda2:').then(r=>{
-     res.react('👊').then(r=>{
-     res.react('👌').then(r=>{
-     res.react('🍸').then(r=>{
-     res.react('🥂').then(r=>{
-     res.react('🌕').then(r=>{
-    let aaa = (reaction ) => reaction.emoji.name === '⚽'&&user.id
-    let mmm = (reaction ) => reaction.emoji.name === '👶'&&user.id
-    let fff = (reaction ) => reaction.emoji.name === '👊'&&user.id
-    let bbb = (reaction ) => reaction.emoji.name === '👌'&&user.id
-    let bbbb = (reaction) => reaction.emoji.name === '🍸'&& user.id
-    let cn = (reaction) => reaction.emoji.name === '🥂'&& user.id
-    let zg = (reaction) => reaction.emoji.name === '🌕'&& user.id
-
+        if (msg.content.startsWith(prefix +'add')) {
+ 
+        if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+msg.channel.send(`**\n${ae} : \` Agar\`  \n${me} :\` Minecraft \` \n${fe}  :\` Fortnite \` \n${be} :\`  Brawlhalla\`  \n${ble} :\` Blacksquad\` \n${lee} :\`League Of Legends\` \n${bne} :\`Bonk.io\`**`).then(res => {     res.react(ae).then(r=>{
+     res.react(me).then(r=>{
+     res.react(fe).then(r=>{
+     res.react(be).then(r=>{
+     res.react(ble).then(r=>{
+     res.react(lee).then(r=>{
+     res.react(bne).then(r=>{
+    let aaa = (reaction ) => reaction.emoji.name === ae &&user.id
+    let mmm = (reaction ) => reaction.emoji.name === me &&user.id
+    let fff = (reaction ) => reaction.emoji.name === fe &&user.id
+    let bbb = (reaction ) => reaction.emoji.name === be &&user.id
+    let bbbb = (reaction) => reaction.emoji.name === ble && user.id
+    let cn = (reaction) => reaction.emoji.name === lee && user.id
+    let zg = (reaction) => reaction.emoji.name === bne && user.id
+ 
     let aa = res.createReactionCollector(aaa);
     let mm = res.createReactionCollector(mmm);
     let ff = res.createReactionCollector(fff);
@@ -793,8 +784,8 @@ aa.on("collect", r => {
     msg.guild.member(user.id).removeRole(b);
     msg.guild.member(user.id).removeRole(black);
     msg.guild.member(user.id).removeRole(le);
-	msg.delete();
-	})
+    msg.delete();
+    })
 mm.on("collect", r => {
     msg.guild.member(user.id).addRole(m);
     msg.guild.member(user.id).removeRole(a);
@@ -802,7 +793,7 @@ mm.on("collect", r => {
     msg.guild.member(user.id).removeRole(b);
     msg.guild.member(user.id).removeRole(black);
     msg.guild.member(user.id).removeRole(le);
-	msg.delete();
+    msg.delete();
 })
 ff.on("collect", r => {
     msg.guild.member(user.id).addRole(f);
@@ -811,7 +802,7 @@ ff.on("collect", r => {
     msg.guild.member(user.id).removeRole(b);
     msg.guild.member(user.id).removeRole(black);
     msg.guild.member(user.id).removeRole(le);
-	msg.delete();
+    msg.delete();
 })
 bb.on("collect", r => {
     msg.guild.member(user.id).addRole(b);
@@ -820,7 +811,7 @@ bb.on("collect", r => {
     msg.guild.member(user.id).removeRole(a);
     msg.guild.member(user.id).removeRole(black);
     msg.guild.member(user.id).removeRole(le);
-	msg.delete();
+    msg.delete();
 })
 bl.on("collect", r => {
     msg.guild.member(user.id).addRole(black);
@@ -829,7 +820,7 @@ bl.on("collect", r => {
     msg.guild.member(user.id).removeRole(b);
     msg.guild.member(user.id).removeRole(a);
     msg.guild.member(user.id).removeRole(le);
-	msg.delete();
+    msg.delete();
 })
 cnn.on("collect", r => {
     msg.guild.member(user.id).addRole(le);
@@ -838,7 +829,7 @@ cnn.on("collect", r => {
     msg.guild.member(user.id).removeRole(b);
     msg.guild.member(user.id).removeRole(a);
     msg.guild.member(user.id).removeRole(black);
-	msg.delete();
+    msg.delete();
 })
 zgg.on("collect", r => {
     msg.guild.member(user.id).addRole(bn);
@@ -848,19 +839,19 @@ zgg.on("collect", r => {
     msg.guild.member(user.id).removeRole(a);
     msg.guild.member(user.id).removeRole(black);
     msg.guild.member(user.id).removeRole(le);
-	msg.delete();
+    msg.delete();
 })
-
+ 
 })
-	 })
-	 })
-	 })
      })
-	 })
      })
-	 })
-	 }
-	 });
+     })
+     })
+     })
+     })
+     })
+     }
+     });
 
 
 
