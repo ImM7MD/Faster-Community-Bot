@@ -765,20 +765,20 @@ var prefix = "!";
 		if (msg.content.startsWith(prefix +'add')) {
 
 		if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-msg.channel.send(`**\n⚽ : \` Agar\`  \n👶 :\` Minecraft \` \n👊  :\` Fortnite \` \n👌 :\`  Brawlhalla\`  \n🍸 :\` Blacksquad\` \n🥂 :\`League Of Legends\` \n🌕 :\`Bonk.io\`**`).then(res => {     res.react('⚽').then(r=>{
-     res.react('👶').then(r=>{
-     res.react('👊').then(r=>{
-     res.react('👌').then(r=>{
-     res.react('🍸').then(r=>{
-     res.react('🥂').then(r=>{
-     res.react('🌕').then(r=>{
-    let aaa = (reaction ) => reaction.emoji.name === '⚽'&&user.id
-    let mmm = (reaction ) => reaction.emoji.name === '👶'&&user.id
-    let fff = (reaction ) => reaction.emoji.name === '👊'&&user.id
-    let bbb = (reaction ) => reaction.emoji.name === '👌'&&user.id
-    let bbbb = (reaction) => reaction.emoji.name === '🍸'&& user.id
-    let cn = (reaction) => reaction.emoji.name === '🥂'&& user.id
-    let zg = (reaction) => reaction.emoji.name === '🌕'&& user.id
+msg.channel.send(`**\n:Agar: : \` Agar\`  \n:minecraft_hd_logo_by_nuryrushda2: :\` Minecraft \` \n:purepng:  :\` Fortnite \` \n:bhlogocenter: :\`  Brawlhalla\`  \n:logo: :\` Blacksquad\` \n:League_of_Legends_logo: :\`League Of Legends\` \n:df095113fba8e08a042a10ca77c002be: :\`Bonk.io\`**`).then(res => {     res.react(':Agar:').then(r=>{
+     res.react(':minecraft_hd_logo_by_nuryrushda2:').then(r=>{
+     res.react(':purepng:').then(r=>{
+     res.react(':bhlogocenter:').then(r=>{
+     res.react(':logo:').then(r=>{
+     res.react(':League_of_Legends_logo:').then(r=>{
+     res.react(':df095113fba8e08a042a10ca77c002be:').then(r=>{
+    let aaa = (reaction ) => reaction.emoji.name === ':Agar:'&&user.id
+    let mmm = (reaction ) => reaction.emoji.name === ':minecraft_hd_logo_by_nuryrushda2:'&&user.id
+    let fff = (reaction ) => reaction.emoji.name === ':purepng:'&&user.id
+    let bbb = (reaction ) => reaction.emoji.name === ':bhlogocenter:'&&user.id
+    let bbbb = (reaction) => reaction.emoji.name === ':logo:'&& user.id
+    let cn = (reaction) => reaction.emoji.name === ':League_of_Legends_logo:'&& user.id
+    let zg = (reaction) => reaction.emoji.name === ':df095113fba8e08a042a10ca77c002be:'&& user.id
 
     let aa = res.createReactionCollector(aaa);
     let mm = res.createReactionCollector(mmm);
