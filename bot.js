@@ -857,6 +857,18 @@ zgg.on("collect", r => {
 
 
 
+client.on('message', message => {
+   if (message.content.startsWith(prefix + "dc")) {
+     message.guild.roles.filter(r => {
+       if(!isNaN(r.name)) {
+         r.delete()
+       }
+     })
+     message.reply("Wait..")
+   }
+});
+
+
 
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا
