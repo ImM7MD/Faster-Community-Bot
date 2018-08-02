@@ -562,7 +562,7 @@ client.on('message', message => {
 
 client.on('message', msg => {//msg
   if (msg.content === 'الوان') {
-    if (msg.channel.id !== "409451434770300928") return;
+    if (msg.channel.id !== "474573006316896277") return;
     msg.channel.send({file : "https://d.top4top.net/p_925trmdy1.png"})
   }
 });;
@@ -572,7 +572,7 @@ const Client = require('discord.js');
 client.on('message', message => {
   let args = message.content.split(' ').slice(1);
 if(message.content.split(' ')[0] == 'لون'){
-if (message.channel.id !== "409451434770300928") return;
+if (message.channel.id !== "474573006316896277") return;
    const embedd = new Discord.RichEmbed()
 .setFooter('Requested by '+message.author.username, message.author.avatarURL)
 .setDescription(`**لا يوجد لون بهاذا الرقم ** ❌ `)
