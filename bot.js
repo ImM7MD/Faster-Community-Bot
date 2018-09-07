@@ -795,8 +795,8 @@ client.on('message', message => {
     });
 
 client.on('voiceStateUpdate', (u, member) => {
-  var parent = '475759820742328320';
-  var channel = '475759986325061642';
+  var parent = '487687415960698890';
+  var channel = '487687515579351040';
   if(member.voiceChannel === null || member.voiceChannel !== member.guild.channels.get(channel)) return console.log(`${member.user.username}'s channel isnt the needed one.`);
   member.guild.createChannel(`${member.user.username}`, 'voice').then(c => {
     if(!c) return;
@@ -811,34 +811,6 @@ client.on('voiceStateUpdate', (u, member) => {
   });
 });
 
-
-
-
-
-  client.on('ready',async () => {
-setInterval(function(){
-var currentTime = new Date(),
-hours = currentTime.getHours() + 3 ,
-ReBeeL = currentTime.getMinutes(),
-ReBeeeL = currentTime.getSeconds(),
-Codes = currentTime.getFullYear(),
-CodeS = currentTime.getMonth() + 1,
-CoDeS = currentTime.getDate()
-if (ReBeeL < 10) {
-ReBeeL = "0" + ReBeeL;
-}
-var suffix = "AM";
-if (hours >= 12) {
-suffix = "PM";
-hours = hours - 12;
-}
-if (hours == 0) {
-hours = 12;
-}
-client.channels.find('id', '487684371973931009').setName(`Time - ${hours} : ${ReBeeL} : ${ReBeeeL} ${suffix}`) 
-client.channels.find('id', '487684396804210690').setName(`Date : ${Codes} - ${CodeS} - ${CoDeS}`)
-}, 1000);
-});
 
 
 
