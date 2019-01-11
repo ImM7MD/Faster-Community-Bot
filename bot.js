@@ -55,7 +55,7 @@ if(message.content.startsWith('!bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "SkillsTeam";
+let copy = "ThunderTeam";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -243,7 +243,7 @@ client.on('message', message => {
            !mute
            !unmute
            !kick
-           !clear
+           !مسح
            ∞⋅∾◅▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▻∾⋅∞
            :video_game: | اوامر الالعاب | :video_game:
            !فكك 
@@ -308,27 +308,29 @@ message.channel.send({embed});
 });
 
 client.on("message", message => {
-  var prefix = "!";
+    var prefix = "!"; // غير هنا حط البرفكس
+ 
+            var args = message.content.substring(prefix.length).split(" ");
+            if (message.content.startsWith(prefix + "مسح")) {
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **ليس لديك صلاحيات**');
+        var msg;
+        msg = parseInt();
+      
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+      message.channel.sendMessage("", {embed: {
+        title: "Done | تــم",
+        color: 0x06DF00,
+        description: "تم مسح الرسائل بنجاح",
+        footer: {
+          text: "Thunder System.bot" // غير هنا حط اسم البوت
+        }
+      }}).then(msg => {msg.delete(3000)});
+                          }
 
-          var args = message.content.substring(prefix.length).split(" ");
-          if (message.content.startsWith(prefix + "clear")) {
- if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحية لمسح الشات**');
-      var msg;
-      msg = parseInt();
-    
-    message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-    message.channel.sendMessage("", {embed: {
-      title: "Done | تــم مسح الشات",
-      color: 0x06DF00,
-      description: "تم مسح الرسائل ",
-      footer: {
-        text: "©zabhm"
-      }
-    }}).then(msg => {msg.delete(3000)});
-                        }
+     
+});
 
-   
-}); 
+
 
 client.on("message", message => {
   if (message.content === "!avatar") {
