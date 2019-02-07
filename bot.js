@@ -797,8 +797,8 @@ client.on('message', message => {
     });
 
 client.on('voiceStateUpdate', (u, member) => {
-  var parent = '487687415960698890';
-  var channel = '487687515579351040';
+  var parent = '475759820742328320';
+  var channel = '475759986325061642';
   if(member.voiceChannel === null || member.voiceChannel !== member.guild.channels.get(channel)) return console.log(`${member.user.username}'s channel isnt the needed one.`);
   member.guild.createChannel(`${member.user.username}`, 'voice').then(c => {
     if(!c) return;
