@@ -840,32 +840,6 @@ client.on('voiceStateUpdate', (u, member) => {
 
 
 
-client.on("ready", async  => {
-setInterval(function(){
-client.category.find('id', '474343269325602817').setName("𝑾");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 ");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 ");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉𝒖");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉𝒖𝒏");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉𝒖𝒏𝒅");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉𝒖𝒏𝒅𝒆");
-client.category.find('id', '474343269325602817').setName("𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒕𝒉𝒖𝒏𝒅𝒆𝒓");
-  }, 60000);
-});
-
-
-
-
 
 
 
