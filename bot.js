@@ -835,7 +835,7 @@ client.on('voiceStateUpdate', (u, member) => {
   });
 });
 
-```js
+
 client.on("message", msg => {
     const rooms = []
     msg.guild.channels.forEach(c => {
