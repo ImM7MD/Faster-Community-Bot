@@ -835,6 +835,90 @@ client.on('voiceStateUpdate', (u, member) => {
   });
 });
 
+```js
+client.on("message", msg => {
+    const rooms = []
+    msg.guild.channels.forEach(c => {
+        if(c.type !== "voice") return;
+        rooms.push(c.name);
+});
+    let args = msg.content.split(" ").slice(1).join(" ")
+    if(msg.content.startsWith(prefix+"اسحبني")){
+        if(!msg.member.voiceChannel) return msg.channel.send("**:no_entry:   انت مو في روم صوتي **");
+        if(!args) return msg.channel.send("**:no_entry:   Please be more specific**\`\`\`"+rooms.join("\n")+"\`\`\`");
+        if(isNaN(args)){
+            let channel = msg.guild.channels.find(ch => ch.name === args) || msg.mentions.members.first().voiceChannel;
+            if(!channel) return msg.channel.send("**:no_entry:   حدد الروم المعين**\`\`\`"+rooms.join("\n")+"\`\`\`");
+            msg.member.setVoiceChannel(channel).then(msg.channel.send("**:white_check_mark:  "+msg.author.username+" تم سحبه "+channel+"!**"))
+        } else {
+            let channel = msg.guild.channels.get(args) || msg.guild.members.get(args).voiceChannel
+            msg.member.setVoiceChannel(channel).then(msg.channel.send("**:white_check_mark:  "+msg.author.username+" تم سحبه "+channel+"!**"));
+
+        }
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
