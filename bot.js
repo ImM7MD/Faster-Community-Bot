@@ -281,7 +281,7 @@ client.on('message', message => {
      `)
      
      
-     message.author.sendEmbed(embed)
+     message.author.send({embed})
      
      }
      });    
